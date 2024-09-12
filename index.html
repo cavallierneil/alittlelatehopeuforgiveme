@@ -11,6 +11,7 @@
         <h1>Surprise Game!</h1>
         <p>Complete the puzzle to reveal the picture!</p>
         
+        <!-- Puzzle game images -->
         <div id="puzzle">
             <img src="images/question-mark.png" class="puzzle-piece" id="piece1" onclick="revealPiece(1)">
             <img src="images/question-mark.png" class="puzzle-piece" id="piece2" onclick="revealPiece(2)">
@@ -18,10 +19,16 @@
             <img src="images/question-mark.png" class="puzzle-piece" id="piece4" onclick="revealPiece(4)">
         </div>
 
+        <!-- Surprise reveal -->
         <div id="message" class="hidden">
             <h2>Here's Your Surprise!</h2>
             <img src="images/surprise.jpg" alt="Surprise Image" class="reveal-image">
         </div>
+
+        <!-- Background image link -->
+        <a href="https://www.google.com/search?q=happy+birthday&tbm=isch" target="_blank" id="background-link">
+            <img src="images/happy-birthday-background.jpg" alt="Happy Birthday Background" class="background-image">
+        </a>
     </div>
 
     <script src="script.js"></script>
