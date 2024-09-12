@@ -1,7 +1,11 @@
+/* Apply the background image to the body */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f8f0f1;
+    background-image: url('images/happy-birthday-background.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0;
     padding: 20px;
 }
@@ -9,17 +13,18 @@ body {
 .container {
     max-width: 600px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay to ensure text is visible */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h1 {
     color: #ff6f61;
-    text-align: center;
 }
 
 p {
     font-size: 1.2em;
     color: #333;
-    text-align: center;
 }
 
 #puzzle {
@@ -40,7 +45,6 @@ p {
     width: 100%;
     height: auto;
     margin-top: 20px;
-    text-align: center;
 }
 
 .hidden {
@@ -49,18 +53,4 @@ p {
 
 #message h2 {
     color: #ff6f61;
-    text-align: center;
-}
-
-/* Center background link image */
-#background-link {
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.background-image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
 }
