@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f8f0f1;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff6f61;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.reveal-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#message h2 {
+    color: #ff6f61;
+}

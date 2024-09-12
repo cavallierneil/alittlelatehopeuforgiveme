@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Surprise Game!</h1>
+        <p>Complete the puzzle to reveal the picture!</p>
+        
+        <div id="puzzle">
+            <img src="images/question-mark.png" class="puzzle-piece" id="piece1" onclick="revealPiece(1)">
+            <img src="images/question-mark.png" class="puzzle-piece" id="piece2" onclick="revealPiece(2)">
+            <img src="images/question-mark.png" class="puzzle-piece" id="piece3" onclick="revealPiece(3)">
+            <img src="images/question-mark.png" class="puzzle-piece" id="piece4" onclick="revealPiece(4)">
+        </div>
+
+        <div id="message" class="hidden">
+            <h2>Here's Your Surprise!</h2>
+            <img src="images/surprise.jpg" alt="Surprise Image" class="reveal-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
