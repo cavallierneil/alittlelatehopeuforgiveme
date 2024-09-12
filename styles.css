@@ -13,17 +13,20 @@ body {
 
 h1 {
     color: #ff6f61;
+    text-align: center;
 }
 
 p {
     font-size: 1.2em;
     color: #333;
+    text-align: center;
 }
 
 #puzzle {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     margin: 20px auto;
 }
 
@@ -37,6 +40,7 @@ p {
     width: 100%;
     height: auto;
     margin-top: 20px;
+    text-align: center;
 }
 
 .hidden {
@@ -45,4 +49,18 @@ p {
 
 #message h2 {
     color: #ff6f61;
+    text-align: center;
+}
+
+/* Center background link image */
+#background-link {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.background-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
