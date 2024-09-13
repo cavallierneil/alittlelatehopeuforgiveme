@@ -6,19 +6,27 @@
     <title>Happy Birthday!</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBEV7R3KP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-KVBEV7R3KP');
-</script>
+      gtag('config', 'G-KVBEV7R3KP');
+    </script>
 
     <!-- Link to Google Font: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
-    
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+         emailjs.init("YOUR_USER_ID");  <!-- Replace with your EmailJS user ID -->
+      })();
+    </script>
+
 </head>
 <body>
     <div class="container">
@@ -41,6 +49,21 @@
             <p>Hope you love it! 🎉🎂</p>
         </div>
     </div>
+
+    <!-- Trigger EmailJS on Page Load -->
+    <script>
+        window.onload = function() {
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                from_name: "Website Visitor",
+                message: "Someone has visited your website!"
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        };
+    </script>
 
     <script src="script.js"></script>
 </body>
