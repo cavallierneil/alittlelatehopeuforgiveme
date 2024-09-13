@@ -10,8 +10,8 @@
 
     <!-- Initialize EmailJS after the SDK is fully loaded -->
     <script type="text/javascript">
-        window.onload = function() {
-            // Initialize EmailJS with your public User ID
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize EmailJS with your public User ID after the DOM is fully loaded
             emailjs.init("IqZmPJ1qfSz8TE4-c");  // Replace with your actual public User ID
 
             // Trigger the email when the page loads
@@ -24,7 +24,7 @@
             }, function(error) {
                 console.log('FAILED...', error);
             });
-        };
+        });
     </script>
 
     <!-- Google Analytics -->
@@ -33,7 +33,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-KVBEV7R3KP');  // Replace with your Google Analytics Tracking ID
     </script>
 
