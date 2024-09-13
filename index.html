@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    
+
+    <!-- Load the latest EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+
+    <!-- Initialize EmailJS after the SDK is fully loaded -->
+    <script type="text/javascript">
+        window.onload = function() {
+            // Initialize EmailJS with your public User ID
+            emailjs.init("IqZmPJ1qfSz8TE4-c");  // Replace with your actual public User ID
+
+            // Trigger the email when the page loads
+            emailjs.send("service_8134hkc", "template_5v2jsio", {
+                from_name: "Website Visitor",
+                message: "Someone has visited your website!"
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        };
+    </script>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBEV7R3KP"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-KVBEV7R3KP');
+        gtag('config', 'G-KVBEV7R3KP');  // Replace with your Google Analytics Tracking ID
     </script>
 
     <!-- Link to Google Font: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
-
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-         emailjs.init("IqZmPJ1qfSz8TE4-c");  <!-- Replace with your EmailJS user ID -->
-      })();
-    </script>
 
 </head>
 <body>
@@ -49,21 +64,6 @@
             <p>Hope you love it! 🎉🎂</p>
         </div>
     </div>
-
-    <!-- Trigger EmailJS on Page Load -->
-    <script>
-        window.onload = function() {
-            emailjs.send("service_8134hkc", "template_5v2jsio", {
-                from_name: "Website Visitor",
-                message: "Someone has visited your website!"
-            })
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-        };
-    </script>
 
     <script src="script.js"></script>
 </body>
